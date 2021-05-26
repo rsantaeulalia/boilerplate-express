@@ -2,12 +2,10 @@ var express = require('express');
 var app = express();
 console.log("Hello world");
 
-app.get("/", returnFile(req, res))
-
-function returnFile(req, res) {
+app.get("/", function returnFile(req, res) {
     const absolutePath = __dirname + "views/index.html"
     res.sendFile(absolutePath)
-}
+});
 
 
 
