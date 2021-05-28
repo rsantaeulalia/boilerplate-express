@@ -20,7 +20,7 @@ app.get("/json", function returnFile(req, res) {
 app.use("/public", express.static(__dirname + "/public"));
 
 app.use(function logRequests(req, res, next){
-    console.log(`${req.method} ${req.path} ${req.ip}`);
+    console.log(`${req.method} ${req.path} -${req.ip}`);
     next();
 });
 
