@@ -3,7 +3,7 @@ var app = express();
 console.log("Hello world");
 
 app.use(function logRequests(req, res, next){
-    console.log(`${req.method} ${req.path} -${req.ip}`);
+    console.log(`${req.method} ${req.path} - ${req.ip}`);
     next();
 });
 
