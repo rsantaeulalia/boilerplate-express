@@ -10,7 +10,7 @@ app.get("/", function returnFile(req, res) {
 app.get("/json", function returnFile(req, res) {
     let aTestObject = {"message": "Hello json"}
 
-    if(ProcessingInstruction.env.MESSAGE_STYLE == 'uppercase'){
+    if(process.env.MESSAGE_STYLE == 'uppercase'){
         aTestObject = {"message": "HELLO JSON"}
     }
 
