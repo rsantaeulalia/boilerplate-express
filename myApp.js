@@ -7,6 +7,11 @@ app.get("/", function returnFile(req, res) {
     res.sendFile(absolutePath)
 });
 
+app.get("/json", function returnFile(req, res) {
+    const aTestObject = {"message": "Hello json"}
+    res.json(aTestObject)
+});
+
 app.use("/public", express.static(__dirname + "/public"));
 
 
