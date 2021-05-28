@@ -8,7 +8,12 @@ app.get("/", function returnFile(req, res) {
 });
 
 app.get("/json", function returnFile(req, res) {
-    const aTestObject = {"message": "Hello json"}
+    let aTestObject = {"message": "Hello json"}
+
+    if(ProcessingInstruction.env.MESSAGE_STYLE == 'uppercase'){
+        aTestObject = {"message": "HELLO JSON"}
+    }
+
     res.json(aTestObject)
 });
 
