@@ -42,7 +42,9 @@ app.get('/name', function (req, res) {
     res.send({ "name": `${req.query.first} ${req.query.last}` });
 });
 
-
+app.post('/name', function (req, res) {
+    res.send({ "name": `${req.body.first} ${req.body.last}` });
+});
 
 
 
